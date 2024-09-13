@@ -1,0 +1,8 @@
+﻿@using ClientApplicationContactBook.ViewModels
+@model List<ReportCount>
+@{
+    var count = ViewBag.TotalCount;
+}
+
+<partial name="_ReportPartialView" />
+<h1>Count of contact based on country: @count</h1>

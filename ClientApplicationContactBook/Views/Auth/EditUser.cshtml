@@ -1,0 +1,108 @@
+﻿@using ClientApplicationContactBook.ViewModels
+@model UpdateUserViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-check-label {
+            margin-right: 15px;
+        }
+
+        .custom-file-label {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1 class="text-center">Modify User</h1>
+            <form asp-action="EditUser" enctype="multipart/form-data">
+                <input type="hidden" asp-for="UserId" />
+                <input type="hidden" asp-for="Image" />
+                <input type="hidden" asp-for="Email" />
+                <input type="hidden" asp-for="ImageByte" />
+                <input type="hidden" asp-for="LoginId" />
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label asp-for="FirstName" class="control-label">First Name</label>
+                        <input asp-for="FirstName" class="form-control" />
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="LastName" class="control-label">Last Name</label>
+                        <input asp-for="LastName" class="form-control" />
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ContactNumber" class="control-label">Contact Number</label>
+                    <input asp-for="ContactNumber" type="number" class="form-control" />
+                    <span asp-validation-for="ContactNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="File" class="control-label">Profile Picture</label>
+                    @if (!string.IsNullOrEmpty(Model.Image) && Model.ImageByte != null)
+                    {
+                        // Convert byte array to Base64 string
+                        string base64Image = Convert.ToBase64String(Model.ImageByte);
+                        string imageSource = $"data:image/png;base64,{base64Image}";
+
+                        <div class="mb-3">
+                            <img src="@imageSource" alt="Profile Picture" class="img-thumbnail" style="max-width: 200px;" />
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="removeImage" name="removeImage">
+                            <label class="form-check-label" for="removeImage">Remove current picture</label>
+                            <input type="hidden" id="removeImageHidden" name="removeImageHidden" />
+                        </div>
+                    }
+                    <div class="custom-file">
+                        <input asp-for="File" type="file" class="custom-file-input" id="customFile" accept="image/*">
+                        <label class="custom-file-label" for="customFile"></label>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <a asp-action="Index1" class="btn btn-secondary" asp-controller="Contact">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#removeImage').change(function () {
+                if ($(this).is(':checked')) {
+                    $('#removeImageHidden').val('true');
+                } else {
+                    $('#removeImageHidden').val('false');
+                }
+            });
+        });
+       
+    </script>
+</body>
+</html>
+
+

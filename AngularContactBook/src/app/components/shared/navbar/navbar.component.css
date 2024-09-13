@@ -1,0 +1,68 @@
+/* Navbar Brand */
+.navbar-brand {
+    color: #17a2b8; /* Brand text color */
+}
+
+.navbar-brand:hover {
+    color: #138496; /* Brand text color on hover */
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: #17a2b8; /* Nav link text color */
+}
+/* Navbar Dropdown */
+.navbar-nav .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #fff; /* Dropdown background color */
+    border: 1px solid rgba(0,0,0,.15); /* Dropdown border color */
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15); /* Dropdown shadow */
+    right: 0; /* Align dropdown menu to the right */
+}
+
+.navbar-nav .dropdown-item {
+    color: #17a2b8; /* Dropdown item text color */
+    font-size: 0.875rem; /* Small font size for dropdown items */
+}
+
+.navbar-nav .dropdown-item:hover,
+.navbar-nav .dropdown-item:focus {
+    background-color: #f8f9fa; /* Dropdown item background color on hover */
+    color: #138496; /* Dropdown item text color on hover */
+}
+
+.navbar-nav .dropdown-divider {
+    border-top-color: rgba(0,0,0,.15); /* Dropdown divider color */
+}
+.user-image {
+    width: 32px; /* Adjust as needed */
+    height: 32px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 50%; /* Makes the image rounded */
+    margin-right: 5px; /* Optional: Adjust spacing between image and username */
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dropdown-toggle::after {
+    display: none;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+  }
+  

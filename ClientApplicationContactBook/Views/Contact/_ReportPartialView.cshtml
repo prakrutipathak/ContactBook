@@ -1,0 +1,133 @@
+﻿@using ClientApplicationContactBook.ViewModels
+
+
+@{
+    var viewmonth = ViewBag.Month;
+    var countryId = ViewBag.CountryId;
+    var stateId = ViewBag.StateId;
+    var gender=ViewBag.Gender;
+    var months = new[]
+        {
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+         };
+
+
+    var monthList = new SelectList(months.Select((monthName, index) => new
+    {
+        Text = monthName,
+        Value = (index + 1)
+    }), "Value", "Text");
+    
+
+}
+<div class="container">
+    <!-- Row to contain columns -->
+    <div class="row">
+        <!-- Column for month dropdown -->
+        <div class="col-md-3">
+            <div class="form-group">
+                <select id="monthDropdown" class="form-control">
+                    <option value=0>--Select Month--</option>
+                    @if (monthList != null)
+                    {
+                        @* var monthList = ViewData["MonthList"] as SelectList; *@
+                        foreach (var item in monthList)
+                        {
+                            <option value="@item.Value" selected='@(viewmonth == Convert.ToInt32(item.Value))'>@item.Text</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+
+        <!-- Column for country dropdown -->
+        <div class="col-md-3">
+            <div class="form-group">
+                <select id="countryDropdown" class="form-control">
+                    <option value=0>--Select Country--</option>
+                    @if (ViewBag.Countries != null)
+                    {
+                        var countries = ViewBag.Countries as List<ContactsCountryViewModel>;
+                        foreach (var item in countries)
+                        {
+                            <option value="@item.CountryId" selected='@(countryId == Convert.ToInt32(item.CountryId))'>@item.CountryName</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+
+        <!-- Column for state dropdown -->
+        <div class="col-md-3">
+            <div class="form-group">
+                <select id="stateDropdown" class="form-control">
+                    <option value=0>--Select State--</option>
+                    @if (ViewBag.States != null)
+                    {
+                        var states = ViewBag.States as List<ContactsStateViewModel>;
+                        foreach (var item in states)
+                        {
+                            <option value="@item.StateId" selected='@(stateId == Convert.ToInt32(item.StateId))'>@item.StateName</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+        <!-- Column for gender dropdown -->
+        <div class="col-md-3">
+            <div class="form-group">
+                <select id="genderDropdown" class="form-control">
+                    <option value="">--Select Gender--</option>
+
+                    <option value='M' selected='@(gender == 'M')'>Male</option>
+                    <option value='F' selected='@(gender == 'F')'>Female</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#monthDropdown').change(function () {
+            var month = $(this).val();
+            if (month==0) {
+                window.location.href = "/Contact/GetDetailByBirthMonth";
+            }
+            else{
+                window.location.href = "/Contact/GetDetailByBirthMonth?month=" + month;
+            }
+        });
+        $('#countryDropdown').change(function () {
+            var countryId = $(this).val();
+            if (countryId==0) {
+                window.location.href = "/Contact/CountContactBasedOnCountry" ;
+            }
+            else{
+                window.location.href = "/Contact/CountContactBasedOnCountry?countryId=" + countryId;
+            }
+        });
+        $('#stateDropdown').change(function () {
+            var stateId = $(this).val();
+            if (stateId==0) {
+                window.location.href = "/Contact/GetDetailByStateId" ;
+            }
+            else{
+                window.location.href = "/Contact/GetDetailByStateId?stateId=" + stateId;
+            }
+        });
+        $('#genderDropdown').change(function () {
+            var gender = $(this).val();
+            if (gender=="") {
+                window.location.href = "/Contact/CountContactBasedOnGender";
+            }
+            else{
+                window.location.href = "/Contact/CountContactBasedOnGender?gender=" + gender;
+            }
+        });
+    });
+</script>
+
+

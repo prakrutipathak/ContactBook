@@ -1,0 +1,223 @@
+.contact-image {
+    border: 5px solid transparent;
+    border-radius: 50px; 
+    width: 60px;
+    height: 60px;
+    border-color: #17a2b8;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.contact-image:hover {
+    border-color: #138496;
+}
+/* ASCENDING DESCENDING */
+.arrowup,
+.arrowdown {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+ 
+.arrowup {
+    margin-bottom: 17px;
+}
+ 
+.arrowdown {
+  margin-left: -10px;
+    margin-top: 0px;
+}
+/* PAGE SIZE */
+label[for="pageSize"] {
+    margin-right: 10px;
+}
+ 
+.page-size-container {
+    display: flex;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+ 
+/* Styling the label */
+.page-size-container label {
+    margin-right: 10px;
+    font-weight: bold;
+   
+    font-size: 1.1em;
+}
+ 
+/* Custom styles for the dropdown */
+#pageSize {
+    width: 100px;
+    padding: 5px 10px;
+    font-size: 1em;
+    border: 2px solid #17a2b8;
+    border-radius: 5px;
+    color: #17a2b8;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+ 
+#pageSize:hover {
+    border-color: #138496;
+    color: #138496;
+}
+ 
+ 
+ 
+/* Additional margin for the page size label */
+label[for="pageSize"] {
+    margin-right: 10px;
+}
+/* Pagination styling */
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination .page-item {
+    margin-right: 5px; /* Adjust spacing between pagination items */
+}
+
+.pagination .page-link {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    color: #17a2b8; /* Text color */
+    background-color: #f8f9fa; /* Background color */
+    border: 1px solid #17a2b8; /* Border color */
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.pagination .page-link:hover {
+    color: #138496; /* Text color on hover */
+    background-color: #e9ecef; /* Background color on hover */
+    border-color: #138496; /* Border color on hover */
+}
+
+.pagination .page-item.active .page-link {
+    color: #fff; /* Text color of active page */
+    background-color: #17a2b8; /* Background color of active page */
+    border-color: #17a2b8; /* Border color of active page */
+}
+/* SERACH */
+/* Input group styling */
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+.input-group .form-control {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-bottom: 0; /* Adjust margin as needed */
+    border: 2px solid #17a2b8; /* Border color */
+    border-radius: 5px;
+    color: #17a2b8; /* Text color */
+    background-color: white; /* Background color */
+    transition: all 0.3s ease;
+}
+
+.input-group .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #17a2b8;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-group .input-group-append .btn {
+    border: 2px solid #17a2b8; /* Border color */
+    border-radius: 0 5px 5px 0;
+    color: #17a2b8; /* Text color */
+    background-color: white; /* Background color */
+    transition: all 0.3s ease;
+}
+
+.input-group .input-group-append .btn:hover {
+    color: white; /* Text color on hover */
+    background-color: #138496; /* Background color on hover */
+    border-color: #138496; /* Border color on hover */
+}
+/* LETTER CSS */
+/* Button and anchor tag styling */
+.btn.letter {
+    margin: 0.8px;
+    border: 2px solid #17a2b8; /* Border color */
+    border-radius: 5px;
+    color: #17a2b8; /* Text color */
+    transition: all 0.3s ease;
+}
+
+.btn.letter:hover {
+    color: #138496; /* Text color on hover */
+    background-color: white; /* Background color on hover */
+    border-color: #138496; /* Border color on hover */
+}
+
+.btn.letter.btn-dark {
+    background-color: #17a2b8; /* Background color when selected */
+    color: #fff; /* Text color when selected */
+}
+
+.btn.letter.btn-light {
+    background-color: white; /* Background color when not selected */
+    color: #17a2b8; /* Text color when not selected */
+}
+/* HEADING CSS */
+/* Heading styling */
+h1 {
+    text-align: center; /* Center the heading */
+    position: relative; /* Enable positioning for hover line */
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 50%; /* Adjust the width of the line */
+    height: 2px; /* Adjust the thickness of the line */
+    background-color: #17a2b8; /* Color reference */
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Align the line to the center */
+    transform: translateX(-50%);
+    transition: width 0.3s ease; /* Transition effect */
+    opacity: 0; /* Initially invisible */
+}
+
+h1:hover::after {
+    width: 100%; /* Expand the line on hover */
+    opacity: 1; /* Make the line visible on hover */
+}
+
+
+/* Button Styling */
+.btn.btn-info {
+    background-color: #17a2b8; /* Button background color */
+    border-color: #17a2b8; /* Button border color */
+    color: #fff; /* Button text color */
+    transition: all 0.3s ease;
+}
+
+.btn.btn-info:hover {
+    background-color: #138496; /* Button background color on hover */
+    border-color: #138496; /* Button border color on hover */
+    color: #fff; /* Button text color on hover */
+}
+
+.btn.btn-info:focus {
+    box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5); /* Focus shadow */
+}
+
+.btn.btn-info:active {
+    background-color: #0d6e84; /* Button background color when active */
+    border-color: #0d6e84; /* Button border color when active */
+}
+
+
+
+

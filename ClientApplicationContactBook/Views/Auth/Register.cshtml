@@ -1,0 +1,135 @@
+﻿@using ClientApplicationContactBook.ViewModels
+@model RegisterViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1 class="text-center">Register</h1>
+            <form asp-action="Register" method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="FirstName">First Name</label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="LastName">Last Name</label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ContactNumber">Contact Number</label>
+                    <input asp-for="ContactNumber" class="form-control" />
+                    <span asp-validation-for="ContactNumber" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="LoginId">Login ID</label>
+                    <input asp-for="LoginId" class="form-control" />
+                    <span asp-validation-for="LoginId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Email">Email</label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ImageByte" class="control-label"></label>
+                    <input class="form-control" type="file" id="fileInput" />
+                    <input asp-for="Image" type="hidden" id="fileName" />
+                    <input asp-for="ImageByte" type="hidden" id="fileContent" />
+                    <img src="" alt="" id="imagePreview" style="width: 100px; height: 100px; display: none;" />
+                    <button class="btn btn-danger" id="removeImage" style="display: none;">
+                        <i class="fa fa-xmark"></i>
+                    </button>
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password">Password</label>
+                    <input asp-for="Password" type="password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ConfirmPassword">Confirm Password</label>
+                    <input asp-for="ConfirmPassword" type="password" class="form-control" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(function () {
+      
+        $('#fileInput').change(function (e) {
+            var file = event.target.files[0];
+            if (file) {
+                if (file.size > 10240) {
+                    alert('Image size should not be greater than 10KB.');
+                    return;
+                }
+                var fileType = file.type;
+                if (fileType === 'image/jpeg' || fileType === 'image/png' || fileType === 'image/jpg') {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var base64String = e.target.result.split(',')[1];
+                        $('#fileContent').val(base64String);
+                        $('#fileName').val(file.name);
+                        $('#imagePreview').attr('src', e.target.result).show();
+                        $('#removeImage').show();
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    alert('Invalid file format! Please upload an image in JPG, JPEG, or PNG format.');
+
+                }
+            }
+
+
+        });
+
+        $('#removeImage').click(function (e) {
+            e.preventDefault();
+            $('#fileContent').val('');
+            $('#fileName').val('');
+            $('#imagePreview').attr('src', '').hide();
+            $('#fileInput').val('');
+            $('#removeImage').hide();
+
+        });
+    });
+
+
+</script>
+
+</html>

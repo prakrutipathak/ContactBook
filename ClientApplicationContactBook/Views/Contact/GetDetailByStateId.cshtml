@@ -1,0 +1,59 @@
+﻿@using ClientApplicationContactBook.ViewModels
+@model List<ContactPaginatedViewModel>
+
+<partial name="_ReportPartialView" />
+
+<h1>Report based on selected state</h1>
+<table class="table table-hover">
+    <thead>
+        <tr>
+
+            <th>Contact Name</th>
+            <th>Birthdate</th>
+            <th>Country Name</th>
+            <th>State Name</th>
+            <th>Contact Number</th>
+            <th>Gender</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count == 0)
+        {
+            <tr>
+                <td colspan="6">No record found!!</td>
+            </tr>
+        }
+        else
+        {
+            @foreach (var contact in Model)
+            {
+                <tr>
+
+                    <td>@contact.FirstName @contact.LastName</td>
+                    @if (contact.BirthDate.HasValue)
+                    {
+                        <td>@contact.BirthDate.Value.ToString("dd/MM/yyyy")</td>
+                    }
+                    else
+                    {
+                        <td>N/A</td>
+                    }
+
+                    <td>@contact.CountryName</td>
+                    <td>@contact.StateName</td>
+                    <td>@contact.ContactNumber</td>
+                    @if (contact.Gender == "F")
+                    {
+                        <td>Female</td>
+                    }
+                    else
+                    {
+                        <td>Male</td>
+                    }
+
+                </tr>
+            }
+        }
+    </tbody>
+</table>

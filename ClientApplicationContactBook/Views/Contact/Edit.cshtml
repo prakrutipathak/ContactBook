@@ -1,0 +1,196 @@
+﻿@using ClientApplicationContactBook.ViewModels
+@model AddContactViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Contact</title>
+    <style>
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -10px;
+            margin-left: -10px;
+        }
+
+        .form-group.col-md-6 {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        .img-thumbnail {
+            max-width: 200px;
+            max-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1 class="text-center mb-4">Modify Contact</h1>
+            <form asp-action="Edit" method="post" enctype="multipart/form-data">
+                <input type="hidden" asp-for="ContactId" />
+                <input type="hidden" asp-for="Image" />
+                <input type="hidden" asp-for="ImageByte" />
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label asp-for="FirstName" class="control-label">First Name</label>
+                        <input asp-for="FirstName" class="form-control" />
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="LastName" class="control-label">Last Name</label>
+                        <input asp-for="LastName" class="form-control" />
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label asp-for="BirthDate" class="control-label">BirthDate</label>
+                        <input asp-for="BirthDate" type="date" class="form-control" />
+                        <span asp-validation-for="BirthDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="ContactNumber" class="control-label">Contact Number</label>
+                        <input asp-for="ContactNumber" type="tel" class="form-control" />
+                        <span asp-validation-for="ContactNumber" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label asp-for="Email" class="control-label">Email</label>
+                        <input asp-for="Email" type="email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="control-label">Gender</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" asp-for="Gender" value="M" id="inGenderMale" />
+                            <label class="form-check-label" for="inGenderMale">Male</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" asp-for="Gender" value="F" id="inGenderFemale" />
+                            <label class="form-check-label" for="inGenderFemale">Female</label>
+                        </div>
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label asp-for="CountryId" class="control-label">Country</label>
+                        <select id="countryDropdown" asp-for="CountryId" class="form-control" asp-items="@(new SelectList(Model.Countries, "CountryId", "CountryName"))">
+                            <option value="">--Select Country--</option>
+                        </select>
+                        <span asp-validation-for="CountryId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="StateId" class="control-label">State</label>
+                        <select id="stateDropdown" asp-for="StateId" class="form-control">
+                            <option value="">--Select State--</option>
+                            @foreach (var state in Model.States)
+                            {
+                                <option value="@state.StateId" data-category="@state.CountryId">@state.StateName</option>
+                            }
+                        </select>
+                        <span asp-validation-for="StateId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="File" class="control-label">Profile Picture</label>
+                    @if (!string.IsNullOrEmpty(Model.Image))
+                    {
+                        <div class="mb-3">
+                            <img src="@Url.Content("~/Uploads/" + Model.Image )" alt="Profile Picture" class="img-thumbnail" />
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="removeImage" name="removeImage">
+                            <label class="form-check-label" for="removeImage">Remove current picture</label>
+                            <input type="hidden" id="removeImageHidden" name="removeImageHidden" />
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="mb-3">
+                           
+                        </div>
+                    }
+                    <div class="custom-file">
+                        <input asp-for="File" type="file"  id="customFile" accept="image/*">
+                        <span asp-validation-for="File" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label">Address</label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check">
+                        <input asp-for="Favourite" type="checkbox" class="form-check-input" id="chkFavourite">
+                        <label class="form-check-label" for="chkFavourite">Add to Favorites</label>
+                        <span asp-validation-for="Favourite" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <a asp-action="Index1" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#removeImage').change(function () {
+                if ($(this).is(':checked')) {
+                    $('#removeImageHidden').val('true');
+                } else {
+                    $('#removeImageHidden').val('false');
+                }
+            });
+
+            // Initially hide all state options
+            $('#stateDropdown option').hide();
+
+            // Show state options corresponding to the initially selected country
+            var initialCountry = $('#countryDropdown').val();
+            $('#stateDropdown option[data-category="' + initialCountry + '"]').show();
+
+            $('#countryDropdown').change(function () {
+                var countryId = $(this).val();
+                if (countryId === '') {
+                    $('#stateDropdown option').hide();
+                    $('#stateDropdown').val('');
+                } else {
+                    $('#stateDropdown option').hide();
+                    $('#stateDropdown option[data-category="' + countryId + '"]').show();
+                }
+                $('#stateDropdown').val('');
+            });
+        });
+    </script>
+</body>
+</html>

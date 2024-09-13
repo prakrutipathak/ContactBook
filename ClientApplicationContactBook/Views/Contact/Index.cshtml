@@ -1,0 +1,57 @@
+﻿@using ClientApplicationContactBook.ViewModels
+@model List<ContactViewModel>
+<h1>Contacts</h1>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Contact ID</th>
+            <th>Contact Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var contact in Model)
+        {
+            <tr>
+                <td>@contact.ContactId</td>
+                <td>@contact.FirstName @contact.LastName</td>
+                <td>
+                    <button class="btn btn-primary" type="button" onclick="showDetails(@contact.ContactId)">Details</button>
+                    <button class="btn btn-default" onclick="location.href='@Url.Action("Edit", new { id = contact.ContactId })'">Edit</button>
+                    <button class="btn btn-danger" onclick="location.href='@Url.Action("Delete", new { id = contact.ContactId })'">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="offcanvas offcanvas-start bg-dark text-light" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="btn-close  bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body" id="detailsBody">
+    </div>
+</div>
+
+<div>
+    <button class="btn btn-primary pull-right" onclick="location.href='@Url.Action("Create")'">Add</button>
+</div>
+
+<script>
+    function showDetails(contactId) {
+       
+        $.ajax({
+            url: '@Url.Action("Details1", "Contact")', 
+            type: 'GET',
+            data: { id: contactId },
+            success: function (data) {
+                $('#detailsBody').html(data);
+                var offcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasWithBothOptions'));
+                offcanvas.show();
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                console.error('Error fetching details:', errorThrown);
+            }
+        });
+    }
+</script>

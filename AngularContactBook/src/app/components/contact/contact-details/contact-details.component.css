@@ -1,0 +1,26 @@
+.card {
+  border-radius: 10px;
+  margin: auto;
+}
+.card-body p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.card-title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.text-center {
+  text-align: center;
+}
+.btn-primary {
+  border-radius: 5px;
+}
+.img-fluid {
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.fas {
+  margin-right: 8px;
+}

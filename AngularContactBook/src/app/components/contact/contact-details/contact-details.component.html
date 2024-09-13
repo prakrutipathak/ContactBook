@@ -1,0 +1,37 @@
+
+
+<div class="container">
+  <h2 class="text-center my-4">{{contact.firstName}} {{contact.lastName}}</h2>
+  <div class="card mb-3 shadow-sm mx-auto" style="max-width: 400px; width: 100%;">
+      <div class="row no-gutters">
+          <div class="col-md-8">
+              <div class="card-body">
+                  <p class="card-text"><i class="fas fa-envelope"></i> Email: {{contact.email}}</p>
+                  <p class="card-text"><i class="fas fa-phone"></i> Contact: {{contact.contactNumber}}</p>
+                  
+                  <p class="card-text"><i class="fas fa-venus-mars"></i> Gender: {{contact.gender ==='F' ? 'Female' :
+                      'Male'}}</p>
+                  <p class="card-text"><i class="fas fa-thumbs-up"></i> Favourite: {{contact.favourite ? 'Yes' :
+                      'No'}}</p>
+                  <p class="card-text"><i class="fas fa-globe"></i> Country: {{contact.country.countryName}}</p>
+                  <p class="card-text"><i class="fas fa-map-marker-alt"></i> State: {{contact.state.stateName}}</p>
+                  <p class="card-text"><i class="fas fa-cake"></i> Birthdate: {{contact.birthDate}}</p>
+              </div>
+          </div>
+          <div class="col-md-4 text-center">
+              <img *ngIf="contact.imageByte; else defaultImage"  class="card-image img-fluid rounded-circle"
+                  [src]="'data:image/jpeg;base64,' + contact.imageByte" alt="Contact Image" [style.height.px]="100"
+                  [style.width.px]="100">
+             
+                 
+              <ng-template #defaultImage>
+                  <img src="assets/Defaultimage.png" class="card-image img-fluid rounded-circle"
+                      alt="Default Image" [style.height.px]="100" [style.width.px]="100">
+              </ng-template>
+          </div>
+      </div>
+  </div>
+  <div class="text-center mt-3">
+      <a [routerLink]="['/contactpagination']" routerLinkActive="router-link-active" class="btn btn-primary">Back to List</a>
+  </div>
+</div>

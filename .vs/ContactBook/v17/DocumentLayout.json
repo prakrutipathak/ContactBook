@@ -1,0 +1,170 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Repos\\Horizon-Feb2024\\ContactBook\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3739CF07-DDA4-4682-A25D-21C40AC38F6A}|APIContactBook\\APIContactBook.csproj|c:\\repos\\horizon-feb2024\\contactbook\\apicontactbook\\services\\implementation\\contactservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3739CF07-DDA4-4682-A25D-21C40AC38F6A}|APIContactBook\\APIContactBook.csproj|solutionrelative:apicontactbook\\services\\implementation\\contactservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3739CF07-DDA4-4682-A25D-21C40AC38F6A}|APIContactBook\\APIContactBook.csproj|c:\\repos\\horizon-feb2024\\contactbook\\apicontactbook\\data\\implementation\\countryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3739CF07-DDA4-4682-A25D-21C40AC38F6A}|APIContactBook\\APIContactBook.csproj|solutionrelative:apicontactbook\\data\\implementation\\countryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3739CF07-DDA4-4682-A25D-21C40AC38F6A}|APIContactBook\\APIContactBook.csproj|c:\\repos\\horizon-feb2024\\contactbook\\apicontactbook\\data\\implementation\\contactrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3739CF07-DDA4-4682-A25D-21C40AC38F6A}|APIContactBook\\APIContactBook.csproj|solutionrelative:apicontactbook\\data\\implementation\\contactrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3739CF07-DDA4-4682-A25D-21C40AC38F6A}|APIContactBook\\APIContactBook.csproj|c:\\repos\\horizon-feb2024\\contactbook\\apicontactbook\\services\\implementation\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3739CF07-DDA4-4682-A25D-21C40AC38F6A}|APIContactBook\\APIContactBook.csproj|solutionrelative:apicontactbook\\services\\implementation\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3739CF07-DDA4-4682-A25D-21C40AC38F6A}|APIContactBook\\APIContactBook.csproj|c:\\repos\\horizon-feb2024\\contactbook\\apicontactbook\\data\\implementation\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3739CF07-DDA4-4682-A25D-21C40AC38F6A}|APIContactBook\\APIContactBook.csproj|solutionrelative:apicontactbook\\data\\implementation\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3739CF07-DDA4-4682-A25D-21C40AC38F6A}|APIContactBook\\APIContactBook.csproj|c:\\repos\\horizon-feb2024\\contactbook\\apicontactbook\\controllers\\statecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3739CF07-DDA4-4682-A25D-21C40AC38F6A}|APIContactBook\\APIContactBook.csproj|solutionrelative:apicontactbook\\controllers\\statecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3739CF07-DDA4-4682-A25D-21C40AC38F6A}|APIContactBook\\APIContactBook.csproj|c:\\repos\\horizon-feb2024\\contactbook\\apicontactbook\\controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3739CF07-DDA4-4682-A25D-21C40AC38F6A}|APIContactBook\\APIContactBook.csproj|solutionrelative:apicontactbook\\controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3739CF07-DDA4-4682-A25D-21C40AC38F6A}|APIContactBook\\APIContactBook.csproj|c:\\repos\\horizon-feb2024\\contactbook\\apicontactbook\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3739CF07-DDA4-4682-A25D-21C40AC38F6A}|APIContactBook\\APIContactBook.csproj|solutionrelative:apicontactbook\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3739CF07-DDA4-4682-A25D-21C40AC38F6A}|APIContactBook\\APIContactBook.csproj|c:\\repos\\horizon-feb2024\\contactbook\\apicontactbook\\apicontactbook.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3739CF07-DDA4-4682-A25D-21C40AC38F6A}|APIContactBook\\APIContactBook.csproj|solutionrelative:apicontactbook\\apicontactbook.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CountryRepository.cs",
+              "DocumentMoniker": "C:\\Repos\\Horizon-Feb2024\\ContactBook\\APIContactBook\\Data\\Implementation\\CountryRepository.cs",
+              "RelativeDocumentMoniker": "APIContactBook\\Data\\Implementation\\CountryRepository.cs",
+              "ToolTip": "C:\\Repos\\Horizon-Feb2024\\ContactBook\\APIContactBook\\Data\\Implementation\\CountryRepository.cs",
+              "RelativeToolTip": "APIContactBook\\Data\\Implementation\\CountryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T12:26:22.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ContactService.cs",
+              "DocumentMoniker": "C:\\Repos\\Horizon-Feb2024\\ContactBook\\APIContactBook\\Services\\Implementation\\ContactService.cs",
+              "RelativeDocumentMoniker": "APIContactBook\\Services\\Implementation\\ContactService.cs",
+              "ToolTip": "C:\\Repos\\Horizon-Feb2024\\ContactBook\\APIContactBook\\Services\\Implementation\\ContactService.cs",
+              "RelativeToolTip": "APIContactBook\\Services\\Implementation\\ContactService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMQBAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T11:19:03.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ContactRepository.cs",
+              "DocumentMoniker": "C:\\Repos\\Horizon-Feb2024\\ContactBook\\APIContactBook\\Data\\Implementation\\ContactRepository.cs",
+              "RelativeDocumentMoniker": "APIContactBook\\Data\\Implementation\\ContactRepository.cs",
+              "ToolTip": "C:\\Repos\\Horizon-Feb2024\\ContactBook\\APIContactBook\\Data\\Implementation\\ContactRepository.cs",
+              "RelativeToolTip": "APIContactBook\\Data\\Implementation\\ContactRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T11:18:42.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthRepository.cs",
+              "DocumentMoniker": "C:\\Repos\\Horizon-Feb2024\\ContactBook\\APIContactBook\\Data\\Implementation\\AuthRepository.cs",
+              "RelativeDocumentMoniker": "APIContactBook\\Data\\Implementation\\AuthRepository.cs",
+              "ToolTip": "C:\\Repos\\Horizon-Feb2024\\ContactBook\\APIContactBook\\Data\\Implementation\\AuthRepository.cs",
+              "RelativeToolTip": "APIContactBook\\Data\\Implementation\\AuthRepository.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAkwAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T10:02:54.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Repos\\Horizon-Feb2024\\ContactBook\\APIContactBook\\Services\\Implementation\\AuthService.cs",
+              "RelativeDocumentMoniker": "APIContactBook\\Services\\Implementation\\AuthService.cs",
+              "ToolTip": "C:\\Repos\\Horizon-Feb2024\\ContactBook\\APIContactBook\\Services\\Implementation\\AuthService.cs",
+              "RelativeToolTip": "APIContactBook\\Services\\Implementation\\AuthService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAqwBgAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T08:56:22.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CountryController.cs",
+              "DocumentMoniker": "C:\\Repos\\Horizon-Feb2024\\ContactBook\\APIContactBook\\Controllers\\CountryController.cs",
+              "RelativeDocumentMoniker": "APIContactBook\\Controllers\\CountryController.cs",
+              "ToolTip": "C:\\Repos\\Horizon-Feb2024\\ContactBook\\APIContactBook\\Controllers\\CountryController.cs",
+              "RelativeToolTip": "APIContactBook\\Controllers\\CountryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T07:31:56.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StateController.cs",
+              "DocumentMoniker": "C:\\Repos\\Horizon-Feb2024\\ContactBook\\APIContactBook\\Controllers\\StateController.cs",
+              "RelativeDocumentMoniker": "APIContactBook\\Controllers\\StateController.cs",
+              "ToolTip": "C:\\Repos\\Horizon-Feb2024\\ContactBook\\APIContactBook\\Controllers\\StateController.cs",
+              "RelativeToolTip": "APIContactBook\\Controllers\\StateController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T07:31:55.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "APIContactBook.csproj",
+              "DocumentMoniker": "C:\\Repos\\Horizon-Feb2024\\ContactBook\\APIContactBook\\APIContactBook.csproj",
+              "RelativeDocumentMoniker": "APIContactBook\\APIContactBook.csproj",
+              "ToolTip": "C:\\Repos\\Horizon-Feb2024\\ContactBook\\APIContactBook\\APIContactBook.csproj",
+              "RelativeToolTip": "APIContactBook\\APIContactBook.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-02T06:56:52.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Repos\\Horizon-Feb2024\\ContactBook\\APIContactBook\\appsettings.json",
+              "RelativeDocumentMoniker": "APIContactBook\\appsettings.json",
+              "ToolTip": "C:\\Repos\\Horizon-Feb2024\\ContactBook\\APIContactBook\\appsettings.json",
+              "RelativeToolTip": "APIContactBook\\appsettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-02T06:55:36.167Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

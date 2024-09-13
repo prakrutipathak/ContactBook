@@ -1,0 +1,64 @@
+<div class="container">
+    <h2 class="text-center  mb-4">Sign Up</h2>
+    <div class="position-relative">
+      <div *ngIf="loading" class="loader-overlay">
+        <img src="assets/loaderImage.gif" class="loader-overlay" alt="loading" />
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form #signUpForm="ngForm" class="needs-validation" (ngSubmit)="onSubmit(signUpForm)" novalidate>
+            <input type="hidden" class="form-control" id="userId" name="userId" [(ngModel)]="user.userId">
+            <input type="hidden" class="form-control" id="email" name="email" [(ngModel)]="user.email">
+            <input type="hidden" class="form-control" id="contactNumber" name="contactNumber" [(ngModel)]="user.contactNumber">
+            <div class="mb-3">
+              <label class="form-label" for="firstName">First Name:</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="user.firstName"
+                required minlength="2">
+              <div *ngIf="signUpForm.controls['firstName']?.invalid && signUpForm.controls['firstName']?.touched">
+                <small class="text-danger" *ngIf="signUpForm.controls['firstName']?.errors?.['required']">First name is
+                  required.</small>
+                <small class="text-danger" *ngIf="signUpForm.controls['firstName']?.errors?.['minlength']">First name must
+                  be at least 2 characters long.</small>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="lastName">Last Name:</label>
+              <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="user.lastName" required
+                minlength="2">
+              <div *ngIf="signUpForm.controls['lastName']?.invalid && signUpForm.controls['lastName']?.touched">
+                <small class="text-danger" *ngIf="signUpForm.controls['lastName']?.errors?.['required']">Last name is
+                  required.</small>
+                <small class="text-danger" *ngIf="signUpForm.controls['lastName']?.errors?.['minlength']">Last name must
+                  be at least 2 characters long.</small>
+              </div>
+            </div>
+           
+            <div class="mb-3">
+              <label class="form-label" for="contactNumber">Contact Number:</label>
+              <input type="text" class="form-control" id="contactNumber" name="contactNumber"
+                [(ngModel)]="user.contactNumber" required pattern="^\+?\d{10,13}$" >
+              <div *ngIf="signUpForm.controls['contactNumber']?.invalid && signUpForm.controls['contactNumber']?.touched">
+                <small class="text-danger" *ngIf="signUpForm.controls['contactNumber']?.errors?.['required']">Contact
+                  number is required.</small>
+                <small class="text-danger" *ngIf="signUpForm.controls['contactNumber']?.errors?.['pattern']">Invalid
+                  contact number format.</small>
+              </div>
+            </div>
+            <div class="mb-3"> 
+                <label class="form-label" for="imageByte"> Profile Pic:</label>
+                <input type="file" class="form-control" id="imageByte" name="imageByte"  #imageInput [(ngModel)]="user.imageByte" (change)="onFileChange($event)" accept="image/*">
+                <button type="button" class="btn btn-danger" *ngIf="imageUrl && user.image!='' " (click)="removeFile()"><i class="fas fa-times"></i></button>
+                <div *ngIf="user.imageByte">
+                  <div *ngIf="imageUrl">
+                    <img [src]="imageUrl" alt="Uploaded Image" style="max-width: 300px;">
+                </div></div>
+               
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary" [disabled]="signUpForm.invalid">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

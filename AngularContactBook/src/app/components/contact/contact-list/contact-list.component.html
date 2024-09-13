@@ -1,0 +1,31 @@
+<h1>Contacts</h1>
+<div *ngIf="loading">
+  <img src="assets/loaderImage.gif" alt="loading..." />
+  </div>
+<table  class="table table-hover" *ngIf="!loading">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngIf="!loading && !contacts">
+      <td>No record found...</td>
+     </tr>
+    <tr *ngFor="let contact of contacts">
+      <td>{{contact.firstName}}</td>
+      <td>{{contact.lastName}}</td>
+      <td>
+        <a [routerLink]="['/modifycontact',contact.contactId]" class="btn btn-outline-primary" style="margin: 5px;" routerLinkActive="router-link-active" >Edit</a> 
+        <a [routerLink]="['/contactdetails',contact.contactId]" class="btn btn-outline-info" routerLinkActive="router-link-active" >Details</a>
+        <a *ngIf="isAuthenticated" class="btn btn-outline-danger" style="margin: 5px;" (click)="confirmDelete(contact.contactId)" >Delete</a> 
+        <a *ngIf="!isAuthenticated"  class="btn btn-outline-danger" style="margin: 5px;" [routerLink]="['/signin']" routerLinkActive="router-link-active" >Delete</a>
+
+    </td>
+    </tr>
+   
+  </tbody>
+</table>
+<a  class="btn btn-secondary" [routerLink]="['/addcontact']" routerLinkActive="router-link-active" >Add</a>

@@ -1,0 +1,427 @@
+[
+  {
+    "ContainingType": "APIContactBook.Controllers.AuthController",
+    "Method": "Edit",
+    "RelativePath": "api/Auth/Edit",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "APIContactBook.Dtos.GetUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.AuthController",
+    "Method": "ForgetPassword",
+    "RelativePath": "api/Auth/ForgetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "forgetDto",
+        "Type": "APIContactBook.Dtos.ForgetDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.AuthController",
+    "Method": "GetUserById",
+    "RelativePath": "api/Auth/GetUserById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "APIContactBook.Dtos.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "register",
+        "Type": "APIContactBook.Dtos.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.ContactController",
+    "Method": "CountContactBasedOnCountry",
+    "RelativePath": "api/Contact/CountContactBasedOnCountry/{countryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "countryId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.ContactController",
+    "Method": "CountContactBasedOnGender",
+    "RelativePath": "api/Contact/CountContactBasedOnGender/{gender}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gender",
+        "Type": "System.Char",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.ContactController",
+    "Method": "AddContact",
+    "RelativePath": "api/Contact/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contactDto",
+        "Type": "APIContactBook.Dtos.AddContactDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.ContactController",
+    "Method": "DeleteConfirmed",
+    "RelativePath": "api/Contact/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.ContactController",
+    "Method": "Edit",
+    "RelativePath": "api/Contact/Edit",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contactDto",
+        "Type": "APIContactBook.Dtos.UpdateContactDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.ContactController",
+    "Method": "GetAllContacts",
+    "RelativePath": "api/Contact/GetAllContacts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.ContactController",
+    "Method": "GetPaginatedContacts",
+    "RelativePath": "api/Contact/GetAllContactsByPagination",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "letter",
+        "Type": "System.Nullable\u00601[[System.Char, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.ContactController",
+    "Method": "GetPaginatedContactsSP",
+    "RelativePath": "api/Contact/GetAllContactsByPaginationSP",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "letter",
+        "Type": "System.Nullable\u00601[[System.Char, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.ContactController",
+    "Method": "GetAllFavourite",
+    "RelativePath": "api/Contact/GetAllFavourite",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.ContactController",
+    "Method": "GetContactById",
+    "RelativePath": "api/Contact/GetContactById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.ContactController",
+    "Method": "GetContactsCount",
+    "RelativePath": "api/Contact/GetContactsCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "letter",
+        "Type": "System.Nullable\u00601[[System.Char, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.ContactController",
+    "Method": "GetDetailByBirthMonth",
+    "RelativePath": "api/Contact/GetDetailByBirthMonth/{month}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "month",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.ContactController",
+    "Method": "GetDetailByStateId",
+    "RelativePath": "api/Contact/GetDetailByStateId/{stateId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "stateId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.ContactController",
+    "Method": "GetPaginatedFavouriteContacts",
+    "RelativePath": "api/Contact/GetPaginatedFavouriteContacts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "letter",
+        "Type": "System.Nullable\u00601[[System.Char, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.ContactController",
+    "Method": "TotalContactFavourite",
+    "RelativePath": "api/Contact/TotalContactFavourite",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "letter",
+        "Type": "System.Nullable\u00601[[System.Char, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.CountryController",
+    "Method": "GetAllCountries",
+    "RelativePath": "api/Country/GetAllCountries",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.StateController",
+    "Method": "GetAllStates",
+    "RelativePath": "api/State/GetAllStates",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.StateController",
+    "Method": "GetStatesByCountryId",
+    "RelativePath": "api/State/GetStatesByCountryId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIContactBook.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[APIContactBook.WeatherForecast, APIContactBook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

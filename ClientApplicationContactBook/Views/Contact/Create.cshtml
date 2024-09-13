@@ -1,0 +1,265 @@
+﻿@using ClientApplicationContactBook.ViewModels
+@model AddContactViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Contact</title>
+    <style>
+        .form-card {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .form-col {
+            width: calc(50% - 10px);
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-check-label {
+            margin-right: 15px;
+        }
+
+        .custom-file-label {
+            overflow: hidden;
+        }
+
+     
+
+        .custom-file-input {
+            display: none;
+        }
+
+        .custom-file-label {
+            cursor: pointer;
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            border-radius: 4px;
+            background-color: #f8f9fa;
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .image-preview {
+            position: relative;
+            margin-top: 10px;
+        }
+
+        #imagePreview {
+            width: 100px;
+            height: 100px;
+            display: none;
+        }
+
+        #removeImage {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            z-index: 100;
+        }
+
+        .custom-file-label::after {
+            content: 'Browse';
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            border-radius: 4px;
+            padding: 8px 12px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .custom-file-input {
+            display: none;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-card">
+            <h1 class="text-center mb-6">Add New Contact</h1>
+            <form asp-action="Create" method="post" enctype="multipart/form-data">
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label asp-for="CountryId" class="control-label">Country</label>
+                            <select id="countryDropdown" asp-for="CountryId" class="form-control" asp-items="@(new SelectList(Model.Countries, "CountryId", "CountryName"))">
+                                <option value="">--Select Country--</option>
+                            </select>
+                            <span asp-validation-for="CountryId" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label asp-for="StateId" class="control-label">State</label>
+                            <select id="stateDropdown" asp-for="StateId" class="form-control">
+                                <option value="">--Select State--</option>
+                                @foreach (var state in Model.States)
+                                {
+                                    <option value="@state.StateId" data-category="@state.CountryId">@state.StateName</option>
+                                }
+                            </select>
+                            <span asp-validation-for="StateId" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label asp-for="FirstName" class="control-label">First Name</label>
+                            <input asp-for="FirstName" class="form-control" />
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="LastName" class="control-label">Last Name</label>
+                            <input asp-for="LastName" class="form-control" />
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label asp-for="ContactNumber" class="control-label">Contact Number</label>
+                            <input asp-for="ContactNumber" type="number" class="form-control" />
+                            <span asp-validation-for="ContactNumber" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Email" class="control-label">Email</label>
+                            <input asp-for="Email" type="email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label asp-for="BirthDate" class="control-label">BirthDate</label>
+                            <input asp-for="BirthDate" type="date" class="form-control" />
+                            <span asp-validation-for="BirthDate" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label class="control-label">Gender</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" asp-for="Gender" value="M" id="inGenderMale" />
+                                <label class="form-check-label" for="inGenderMale">Male</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" asp-for="Gender" value="F" id="inGenderFemale" />
+                                <label class="form-check-label" for="inGenderFemale">Female</label>
+                            </div>
+                            <span asp-validation-for="Gender" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label asp-for="Address" class="control-label">Address</label>
+                            <input asp-for="Address" class="form-control" />
+                            <span asp-validation-for="Address" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input asp-for="Favourite" type="checkbox" class="form-check-input" id="chkFavourite">
+                                <label class="form-check-label" for="chkFavourite">Add to Favorites</label>
+                                <span asp-validation-for="Favourite" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label asp-for="File" class="control-label">Profile Photo</label>
+                            <div class="input-group">
+                                <input asp-for="File" type="file" class="custom-file-input" id="fileInput" accept="image/*">
+                                <label class="custom-file-label" for="fileInput">Choose file...</label>
+                            </div>
+                            <div class="image-preview">
+                                <img src="" alt="" id="imagePreview" />
+                                <button class="btn btn-danger btn-sm" id="removeImage" style="display: none;"><i class="fas fa-times"></i></button>
+                            </div>
+                            <span asp-validation-for="File" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                    <a asp-action="Index1" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            // Initially hide all state options
+            $('#stateDropdown option').hide();
+
+            // Get the initially selected country
+            var initialCountry = $('#countryDropdown').val();
+
+            // Show state options corresponding to the initially selected country
+            $('#stateDropdown option[data-category="' + initialCountry + '"]').show();
+
+            $('#countryDropdown').change(function () {
+                var countryId = $(this).val();
+                if (countryId === '') {
+                    $('#stateDropdown option').hide();
+                    $('#stateDropdown').val('');
+                }
+                else {
+                    $('#stateDropdown option').hide();
+                    $('#stateDropdown option[data-category="' + countryId + '"]').show();
+                }
+                // Reset the selected option in the state dropdown to "--Select State--"
+                $('#stateDropdown').val('');
+            });
+
+            $('#fileInput').change(function (e) {
+                var file = e.target.files[0];
+                if (file) {
+                    var fileType = file.type;
+                    if (fileType === 'image/jpeg' || fileType === 'image/png' || fileType === 'image/jpg') {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            $('#imagePreview').attr('src', e.target.result).show();
+                            $('#removeImage').show();
+                        };
+                        reader.readAsDataURL(file);
+                    } else {
+                        alert('Invalid file format! Please upload an image in JPG, JPEG, or PNG format.');
+                    }
+                }
+            });
+
+            $('#removeImage').click(function (e) {
+                e.preventDefault();
+                $('#imagePreview').attr('src', '').hide();
+                $('#fileInput').val('');
+                $('#removeImage').hide();
+            });
+        });
+    </script>
+</body>
+</html>

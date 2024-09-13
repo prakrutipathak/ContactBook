@@ -1,0 +1,131 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ClientApplicationContactBook
+build_property.RootNamespace = ClientApplicationContactBook
+build_property.ProjectDir = C:\Repos\Horizon-Feb2024\ContactBook\ClientApplicationContactBook\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Repos\Horizon-Feb2024\ContactBook\ClientApplicationContactBook
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Auth/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Auth/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxFZGl0VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Auth/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Auth/ForgotPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Auth/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Auth/RegisterSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3RlclN1Y2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Contact/CountContactBasedOnCountry.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDb3VudENvbnRhY3RCYXNlZE9uQ291bnRyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Contact/CountContactBasedOnGender.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDb3VudENvbnRhY3RCYXNlZE9uR2VuZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Contact/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Contact/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Contact/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Contact/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Contact/Favourite.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxGYXZvdXJpdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Contact/GetDetailByBirthMonth.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxHZXREZXRhaWxCeUJpcnRoTW9udGguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Contact/GetDetailByStateId.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxHZXREZXRhaWxCeVN0YXRlSWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Contact/Index1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleDEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Contact/_ReportPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxfUmVwb3J0UGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Shared/_AuthenticationView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BdXRoZW50aWNhdGlvblZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Shared/_Layoutwithoutnavbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXR3aXRob3V0bmF2YmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repos/Horizon-Feb2024/ContactBook/ClientApplicationContactBook/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-t48k855w53
